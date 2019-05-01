@@ -1,0 +1,8 @@
+//
+// Created by cenicol on 5/1/19.
+//
+
+#ifndef CPPDATASTRUCTURES_ARRAY1_HPP
+#define CPPDATASTRUCTURES_ARRAY1_HPP
+
+#endif //CPPDATASTRUCTURES_ARRAY1_HPP
