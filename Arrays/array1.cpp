@@ -5,6 +5,7 @@
 #include "array1.hpp"
 
 #include <iostream>
+#include <iterator>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ int main(int argc, char* argv[])
     cout << "sizeof(ary1): " << sizeof(ary1) << endl;
 
     size_t ary1Len = sizeof(ary1) / sizeof(int);
+    int* pBegin = ary1;
     int* pEnd = ary1 + ary1Len;
 
     cout << "ary1Len: " << ary1Len << endl;
@@ -43,9 +45,21 @@ int main(int argc, char* argv[])
     cout << endl;
 
     cout << "Print the contents of the array using pointers" << endl;
-    for(int *p = ary1; p < pEnd; ++p) {
+    for(int *p = pBegin; p < pEnd; ++p) {
         cout << p << ": " << *p << endl;
     }
+    std::cout << endl;
+
+    // Printing using C++ and STL
+
+    // Print using the copy algorithm. This section shows that pointers to
+    // arrays can function as STL containers.
+    cout << "Printing using the copy algorithm" << endl;
+    std::copy(pBegin,
+              pEnd,
+              ostream_iterator<int>(std::cout,",")
+    );
+    std::cout << endl;
 
     return 0;
 }
