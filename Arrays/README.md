@@ -1,7 +1,13 @@
 To build
 
-mkdir build
-cd build
-cmake ..
-make
+```bash
+ mkdir build
+ cd build
+ cmake ..
+ make
+```
+
+To Run
+```bash
 ./array1
+```
